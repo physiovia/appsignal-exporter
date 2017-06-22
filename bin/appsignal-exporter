@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.dirname(__FILE__) + "/../lib"
+
+require 'rubygems'
+require 'appsignal-exporter'
+require 'yaml'
+
+params = Hash[ARGV.map do |arg|
+  split = arg.split('=')
+  [split[0].to_sym, split[1]]
+end]
+
+exporter = AppsignalExporter.new(ENV['APPSIGNAL_API_KEY'], ENV['APPSIGNAL_APP_ID'])
+exporter.export_errors(params)

@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = 'clemens.kofler@physiovia.com'
   s.executables = ['appsignal-exporter']
   s.files       = `git ls-files -z`.split("\0")
-  s.homepage    = 'http://rubygems.org/gems/appsignal-exporter'
+  s.homepage    = 'https://github.com/physiovia/appsignal-exporter'
   s.license     = 'MIT'
 
   s.add_dependency 'rest-client'

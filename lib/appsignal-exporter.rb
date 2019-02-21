@@ -19,13 +19,13 @@ class AppsignalExporter
 
     error_samples_response = get('samples/errors', params)
 
-    output_file.write(error_samples_response)
+    output_file.write(error_samples_response.to_json)
 
     error_samples_response['log_entries'].each do |entry|
       next if (output_file = @output_path.join("#{entry['id']}.json")).exist?
 
       error_sample_response = get("samples/#{entry['id']}")
-      output_file.write(error_sample_response)
+      output_file.write(error_sample_response.to_json)
     end
   end
 

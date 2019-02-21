@@ -22,4 +22,4 @@ Optionally pass parameters as defined in the [API docs](https://docs.appsignal.c
 
 ## Credits
 
-(c) 2017 physiovia GmbH
+(c) 2017-2019 Temedica GmbH
